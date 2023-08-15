@@ -1,3 +1,82 @@
-div {
-  color: red;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background-color: grey;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  width: 2500px;
+  height: 100%;
+  background-color: lightgray;
+  transition: all 0.2s ease;
+}
+
+.slider-item {
+  height: 500px;
+  width: 500px;
+}
+
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+.blue {
+  background-color: blue;
+}
+.black {
+  background-color: black;
+}
+.white {
+  background-color: white;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btn.btn-right {
+  right: 0%;
+}
+
+.nav-dots-container {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+}
+
+.nav-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: lightgray;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.active {
+  background-color: gray;
 }
